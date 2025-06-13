@@ -58,11 +58,11 @@ ls -l test/testfile.txt test/symlink_to_testfile test/hardlink_to_testfile
 ```
 ### Результаты работы
 
-![](DevOps/WORKS/files/1_1.png)
+![](files/1_1.png)
 
-![](DevOps/WORKS/files/1_2.png)
+![](files/1_2.png)
 
-![](DevOps/WORKS/files/1_3.png)
+![](files/1_3.png)
 
 ## Задание 2: Создание systemd-юнита
 
@@ -111,13 +111,13 @@ sudo systemctl list-timers --all
 ### Результаты работы
 
 
-![](DevOps/WORKS/files/2_cleanup.service.png)
+![](files/2_cleanup.service.png)
 
-![](DevOps/WORKS/files/2_cleanup.sh.png)
+![](files/2_cleanup.sh.png)
 
-![](DevOps/WORKS/files/2_cleanup.timer.png)
+![](files/2_cleanup.timer.png)
 
-![](DevOps/WORKS/files/2_status.png)
+![](files/2_status.png)
 
 ## Задание 3: Преобразование символических ссылок
 
@@ -158,9 +158,9 @@ cat symlink_to_testfile
 
 ### Результаты работы
 
-![](DevOps/WORKS/files/3_1.png)
+![](files/3_1.png)
 
-![](DevOps/WORKS/files/3_2.png)
+![](files/3_2.png)
 
 ## Задание 4: Работа с символическими ссылками
 
