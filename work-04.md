@@ -1,6 +1,6 @@
 # 11.7 Практическая работа
 
-## Задание 1: Работа с жёсткими и символическими ссылками
+## Задание 1
 
 ```bash
 sudo vim delete.sh
@@ -56,15 +56,17 @@ ls -l test/testfile.txt test/symlink_to_testfile test/hardlink_to_testfile
 ./delete.sh test/testfile.txt
 ./delete.sh test/non_existing_file.txt
 ```
-### Результаты работы
 
-![](files/1_1.png)
+### Скриншоты
 
-![](files/1_2.png)
+![](files/f04/1_1.png)
 
-![](files/1_3.png)
+![](files/f04/1_2.png)
 
-## Задание 2: Создание systemd-юнита
+![](files/f04/1_3.png)
+
+---
+## Задание 2
 
 ```bash
 sudo vim cleanup.sh
@@ -108,18 +110,18 @@ systemctl status cleanup.timer
 sudo systemctl list-timers --all
 ```
 
-### Результаты работы
+### Скриншоты
 
+![](files/f04/2_cleanup.service.png)
 
-![](files/2_cleanup.service.png)
+![](files/f04/2_cleanup.sh.png)
 
-![](files/2_cleanup.sh.png)
+![](files/f04/2_cleanup.timer.png)
 
-![](files/2_cleanup.timer.png)
+![](files/f04/2_status.png)
 
-![](files/2_status.png)
-
-## Задание 3: Преобразование символических ссылок
+---
+## Задание 3
 
 ```bash
 sudo vim convert_symlink.sh
@@ -156,13 +158,14 @@ ln -s testfile.txt symlink_to_testfile
 cat symlink_to_testfile
 ```
 
-### Результаты работы
+### Скриншоты
 
-![](files/3_1.png)
+![](files/f04/3_1.png)
 
-![](files/3_2.png)
+![](files/f04/3_2.png)
 
-## Задание 4: Работа с символическими ссылками
+---
+## Задание 4
 
 #### Что произойдёт, если скопировать символическую ссылку из одной папки в другую запуском команды вида `cp symlink /path/to/new/dir`?
 
