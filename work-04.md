@@ -128,34 +128,19 @@ sudo vim convert_symlink.sh
 
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <symbolic_link>"
+if [ $# -ne 1 ]
+then
+    echo "Please provide a symlink as an argument"
     exit 1
 fi
 
-symlink=$1
-
-if [ -L "$symlink" ]; then
-    original_file=$(readlink "$symlink")
-    
-    if [ -f "$original_file" ]; then
-        cp "$original_file" "$symlink"
-        echo "The symbolic link '$symlink' has been converted to a regular file with the contents of the original '$original_file'."
-    else
-        echo "The original file '$original_file' does not exist."
-    fi
-else
-    echo "'$symlink' is not a symbolic link."
+if [ ! -L $1 ]
+then
+    echo "The argument is not a symlink"
     exit 1
 fi
 
-sudo chmod +x convert_symlink.sh
-
-echo "This is a test file." > testfile.txt
-ln -s testfile.txt symlink_to_testfile
-
-./convert_symlink.sh symlink_to_testfile
-cat symlink_to_testfile
+mv $(readlink $1) $1
 ```
 
 ### Скриншоты
@@ -163,6 +148,12 @@ cat symlink_to_testfile
 ![](files/f04/3_1.png)
 
 ![](files/f04/3_2.png)
+
+### Исправление ошибки
+
+![](files/Pasted%20image%2020250615224754.png)
+
+![](files/Pasted%20image%2020250615224707.png)
 
 ---
 ## Задание 4
